@@ -4,3 +4,4 @@
 - This project is not "completed", my database still messed up with the images data and most the data i harvested can't even match my DJango database setting.
 - All the remaining work will be completed and submited before the final exam date (25/12/2023)
 - Subgoal is the subgoal.svg
+- Progress report is the .pptx file
