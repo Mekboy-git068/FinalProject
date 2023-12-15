@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Products</h1>
+    </div>
+
+    <!-- Product List -->
+    <div class="row">
+        {% for product in products %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <!-- Product Image -->
+                    <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.title }}">
+
+                    <!-- Product Details -->
+                    <div class="card-body">
+                        <h4 class="card-title">{{ product.title }}</h4>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="card-text">Price: ${{ product.price }}</p>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-sm btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
